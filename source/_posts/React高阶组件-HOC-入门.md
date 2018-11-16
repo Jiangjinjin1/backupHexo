@@ -30,7 +30,7 @@ copyright : true
   
 > `A higher-order component is a function that takes a component and returns a new component.`
 
-  &nbsp;&nbsp;&nbsp;&nbsp;(本人也翻译了React官方文档的[Advanced Guides](https://github.com/MrErHu/React-Advanced-Guides-CN)部分，官方的高阶组件中文文档戳[这里](https://link.juejin.im/?target=https%3A%2F%2Fgithub.com%2FMrErHu%2FReact-Advanced-Guides-CN%2Fblob%2Fmaster%2Fdoc%2FHigher%2520Order%2520Components.md))
+  &nbsp;&nbsp;&nbsp;&nbsp;(参照翻译了React官方文档的[Advanced Guides](https://github.com/MrErHu/React-Advanced-Guides-CN)部分，官方的高阶组件中文文档戳[这里](https://link.juejin.im/?target=https%3A%2F%2Fgithub.com%2FMrErHu%2FReact-Advanced-Guides-CN%2Fblob%2Fmaster%2Fdoc%2FHigher%2520Order%2520Components.md))
   
   &nbsp;&nbsp;&nbsp;&nbsp;这么看来，高阶组件仅仅只是是一个接受组件组作输入并返回组件的函数。看上去并没有什么，那么高阶组件能为我们带来什么呢？首先看一下高阶组件是如何实现的，通常情况下，实现高阶组件的方式有以下两种:
 
