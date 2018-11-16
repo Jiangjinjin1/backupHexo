@@ -3,7 +3,7 @@ title: 理解applyMiddleware和createStore之间的关系
 date: 2017-08-01 11:26:23
 tags:
 top: 100
-copyright : ture
+copyright : true
 ---
 
 #### 前言
