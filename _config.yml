@@ -108,7 +108,7 @@ search:
 # 备份整个hexo
 backup:
   type: git
-  message: update 备份信息哦
+  message: update 更新文件
   repository:
      github: git@github.com:Jiangjinjin1/backupHexo.git,master
      gitcafe: git@github.com:Jiangjinjin1/backupHexo.git,master
