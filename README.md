@@ -1,6 +1,28 @@
 # backupHexo
 备份hexo博客
 
+## 另外还有其他几个常用命令：
+```javascript
+$ hexo new "postName" #新建文章
+$ hexo new page "pageName" #新建页面
+```
+
+## 常用简写
+```javascript
+$ hexo n == hexo new
+$ hexo g == hexo generate
+$ hexo s == hexo server
+$ hexo d == hexo deploy
+```
+
+
+## 常用组合
+```javascript
+$ hexo d -g #生成部署
+$ hexo s -g #生成预览
+```
+
+
 ## 如何备份
 下载hexo-git-backup依赖,
 在_.config.yml添加backup:配置具体如下
