@@ -1,9 +1,12 @@
 ---
 title: markdown基础语法
 date: 2018-11-16 13:59:03
-tags:
 top: 100
 copyright : true
+tags:
+- 工具类
+categories:
+- 工具类
 ---
 
 # 1. markdown是什么？

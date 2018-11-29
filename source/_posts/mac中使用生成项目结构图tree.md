@@ -2,8 +2,11 @@
 title: mac中使用生成项目结构图tree
 top: 100
 date: 2018-11-29 10:06:31
+copyright: true
 tags:
-copyright:
+- 工具类
+categories:
+- 工具类
 ---
 
 # mac

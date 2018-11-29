@@ -2,8 +2,11 @@
 title: mpvue入手及遇到的坑点
 top: 100
 date: 2018-11-29 09:59:37
+copyright: true
 tags:
-copyright:
+- mpvue
+categories:
+- mpvue
 ---
 # 前言
 

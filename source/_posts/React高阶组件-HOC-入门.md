@@ -1,9 +1,12 @@
 ---
 title: React高阶组件(HOC)入门
 date: 2018-11-16 15:24:47
-tags:
 top: 100
 copyright : true
+tags:
+- react
+categories:
+- react
 ---
 
 # 前言
