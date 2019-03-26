@@ -948,6 +948,27 @@ __注意：get或set不是必须成对出现，任写其一就可以。如果不
 在ie8下只能在DOM对象上使用，尝试在原生的对象使用 Object.defineProperty()会报错。
 
 
+## 8、类型判断
+
+判断 Target 的类型，单单用 typeof 并无法完全满足，这其实并不是 bug，本质原因是 JS 的万物皆对象的理论。因此要真正完美判断时，我们需要区分对待:
+
++ 基本类型(`null`): 使用 `String(null)`
++ 基本类型(`string / number / boolean / undefined`) + `function`: 直接使用 `typeof`即可
++ 其余引用类型(`Array / Date / RegExp Error`): 调用`toString`后根据`[object XXX]`进行判断
+
+**很稳的判断封装:**
+```javascript
+let class2type = {}
+'Array Date RegExp Object Error'.split(' ').forEach(e => class2type[ '[object ' + e + ']' ] = e.toLowerCase()) 
+
+function type(obj) {
+    if (obj == null) return String(obj)
+    return typeof obj === 'object' ? class2type[ Object.prototype.toString.call(obj) ] || 'object' : typeof obj
+}
+
+```
+
+
 # 三、http、html和浏览器篇
 
 ## 1、http和https
