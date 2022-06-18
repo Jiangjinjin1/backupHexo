@@ -1,6 +1,15 @@
 # backupHexo
 备份hexo博客
 
+Using
+```shell
+hexo backup 
+```
+or
+```shell
+hexo b
+```
+
 ## 另外还有其他几个常用命令：
 ```javascript
 $ hexo new "postName" #新建文章
