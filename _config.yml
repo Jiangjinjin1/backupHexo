@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: fighting of erha
+title: 遇到困难不回头
 subtitle:
 description:
-author: fighting of erha
-language: zh-Hans
+author: jinjinjiang
+language: zh-CN
 timezone:
 
 # URL
@@ -108,7 +108,7 @@ search:
 # 备份整个hexo
 backup:
   type: git
-  message: update 博客更新
+  message: 升级hexo库，升级Next主题
   repository:
      github: git@github.com:Jiangjinjin1/backupHexo.git,master
      gitcafe: git@github.com:Jiangjinjin1/backupHexo.git,master
