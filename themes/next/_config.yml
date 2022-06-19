@@ -852,7 +852,7 @@ motion:
 # Dependencies: https://github.com/theme-next/theme-next-pace
 # For more information: https://github.com/HubSpot/pace
 pace:
-  enable: true
+  enable: false
   # Themes list:
   # big-counter | bounce | barber-shop | center-atom | center-circle | center-radar | center-simple
   # corner-indicator | fill-left | flat-top | flash | loading-bar | mac-osx | material | minimal
@@ -1028,6 +1028,6 @@ needmoreshare:
 passage_end_tag:
   enabled: true
 
-# Online contact
-daovoice: true
-daovoice_app_id: 048bedad
+# Online contact daocloud启用目前会导致文章显示不了
+#daovoice: true
+#daovoice_app_id: 048bedad
