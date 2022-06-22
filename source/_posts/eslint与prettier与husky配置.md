@@ -33,7 +33,7 @@ npx eslint —-init
 ```
 **获得一个.eslintrc.json文件,根据终端提示，选择项目框架类型，本文是以react+ts，按照提示选择，并生成.eslintrc.json文件**
 
-<img src="/images/projectConfigure/project_configure_01.png" alt=".eslintrc.json" title=.eslintrc.json配置内容"">
+<img src="/images/projectConfigure/project_configure_01.png" alt=".eslintrc.json" title=".eslintrc.json配置内容"">
 
 ## 3、创建.eslintignore文件
 
