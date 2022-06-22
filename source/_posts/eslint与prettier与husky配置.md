@@ -118,8 +118,82 @@ ___
 
 ```
 
-## 4、总结
-`这里需要再强调一点，这个extends数组中的规则，后面的会覆盖前面的，也就是vue/essential会覆盖掉recommended中的重复部分。`
+## 4、项目中import会很多行，且混在一起，很难区分外部、三方、内部包引入
+> 你可能认识到这里的问题。很难区分什么是所有的第三方和本地（内部）导入。它们没有被分组，似乎到处都是。
+
+解决方案：
+安装：
+```shell
+yarn add eslint-plugin-import -D
+```
+
+完整配置如下：
+```json
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended", // 禁用插件中与 Prettier 冲突的规则
+        "plugin:prettier/recommended" // eslint-plugin-prettier搭配eslint-config-prettier使用简写形式
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint",
+        "import" // eslint-plugin-import配置
+    ],
+    "rules": {
+        "prettier/prettier": "warn", // 开启prettier规则
+        "@typescript-eslint/ban-ts-comment": "off",
+        "eqeqeq": 2, //必须使用全等
+        "no-debugger": "warn",
+        "react/display-name": 0, // 防止React组件定义中缺少displayName
+        "react/no-string-refs": "warn", // 防止字符串定义引用和防止引用this.refs
+        "react-hooks/exhaustive-deps": 0,
+        "no-unused-vars": 0, // 禁止出现未使用过的变量
+        "react/prop-types": 1, // 防止React组件定义中缺少属性验证
+        "indent": 0, // 强制使用一致的缩进
+        "import/order": [ // eslint-plugin-import 规则配置
+            "error",
+            {
+                "groups": ["builtin", "external", "internal", ["parent", "sibling"]],
+                "pathGroups": [
+                    {
+                        "pattern": "react",
+                        "group": "external",
+                        "position": "before"
+                    }
+                ],
+                "pathGroupsExcludedImportTypes": ["react"],
+                "newlines-between": "always",
+                "alphabetize": {
+                    "order": "asc",
+                    "caseInsensitive": true
+                }
+            }
+        ]
+    }
+}
+
+```
+
+<img src="/images/projectConfigure/project_configure_09.png" title="改善后的效果">
+
+参考：[eslint-plugin-import配置](https://dev.to/otamnitram/sorting-your-imports-correctly-in-react-213m)
+
+## 5、总结
+`这里需要再强调一点，这个extends数组中的规则，后面的会覆盖前面的，也就是plugin:react/recommended会覆盖掉recommended中的重复部分。`
 并且这里的规则是由安装依赖引入的，存放在node_modules文件夹中，也就是为了保证其他开发人员代码一致，这里面的文件是不允许改动的。
 所以说eslint和prettier的冲突问题，其实说的是这些依赖引入的规则和prettier的冲突！
 
